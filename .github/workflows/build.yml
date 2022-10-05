@@ -16,7 +16,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v2
         with:
-          push: ${{ github.ref_name == "master" }}
+          push: ${{ github.ref_name == 'master' }}
           context: "."
           tags: ghcr.io/${{ github.event.repository.name }}:aosp-11-gsi
           platforms: linux/amd64,linux/arm64
